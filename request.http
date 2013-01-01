@@ -1,0 +1,81 @@
+# endpoin actualizar el token 
+GET http://localhost:4001/api/auth
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWRfdXNlciI6Im1fMSIsImlhdCI6MTM1NzAxNzcyNCwiZXhwIjoxMzU3Mjc2OTI0fQ.8m-L5cW7_NyBMFzBdPcC2hIYCulC0CtmFMDPOlzyLkM"
+
+### Endpoin para el login de un usuario
+POST http://localhost:4001/api/auth
+Content-Type: application/json
+
+{
+"email":"usuario@gmail.com",
+"password":"123456"
+}
+
+### Register user
+POST http://localhost:4001/api/auth/add
+Content-Type: application/json
+
+{
+"name":"luis",
+"email":"luis@gmail.com",
+"password":"123456"
+}
+
+### agregar contactos a un usuario 
+POST http://localhost:4001/api/contacts/add
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWRfdXNlciI6Im1fMSIsIm5hbWUiOiJQcm9iYW5kbyBlbmRwb2luIiwiaWF0IjoxMzU3MDIyMjIyLCJleHAiOjEzNTcyODE0MjJ9.LLwpIXAPSi_Cq-MMwsRcl1Rvi2OTwy7K1jU8_wkEEhA
+Content-Type: application/json
+
+{
+"fullname":"contacto1",
+"email":"contacto1Prueba@gmail.com",
+"phone":"123456789",
+"direction":"cumana"
+}
+
+### traer los contactos de un usuario
+Get http://localhost:4001/api/contacts/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWRfdXNlciI6Im1fMSIsIm5hbWUiOiJQcm9iYW5kbyBlbmRwb2luIiwiaWF0IjoxMzU3MDIyMjIyLCJleHAiOjEzNTcyODE0MjJ9.LLwpIXAPSi_Cq-MMwsRcl1Rvi2OTwy7K1jU8_wkEEhA
+
+### actualizar un contacto 
+PUT http://localhost:4001/api/contacts/update/F8888888u
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWRfdXNlciI6Im1fMSIsImlhdCI6MTM1NzAxNzcyNCwiZXhwIjoxMzU3Mjc2OTI0fQ.8m-L5cW7_NyBMFzBdPcC2hIYCulC0CtmFMDPOlzyLkM
+Content-Type: application/json
+
+{
+"fullname":"update contact",
+"email":"prueba_update@gmail.com",
+"phone":"123456789",
+"direction":"cumana"
+}
+### Eliminar un contacto 
+DELETE http://localhost:4001/api/contacts/delete/F8888888u HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWRfdXNlciI6Im1fMSIsImlhdCI6MTM1NzAxNzcyNCwiZXhwIjoxMzU3Mjc2OTI0fQ.8m-L5cW7_NyBMFzBdPcC2hIYCulC0CtmFMDPOlzyLkM
+
+###cargar el perfil de un usuario
+Get http://localhost:4001/api/users/
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWRfdXNlciI6Im1fMSIsImlhdCI6MTM1NzAxNzcyNCwiZXhwIjoxMzU3Mjc2OTI0fQ.8m-L5cW7_NyBMFzBdPcC2hIYCulC0CtmFMDPOlzyLkM
+
+### Update User
+PUT http://localhost:4001/api/users/update
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWRfdXNlciI6Im1fMSIsImlhdCI6MTM1NzAxNzcyNCwiZXhwIjoxMzU3Mjc2OTI0fQ.8m-L5cW7_NyBMFzBdPcC2hIYCulC0CtmFMDPOlzyLkM
+Content-Type: application/json
+
+{
+"name":"usuario",
+"email":"usuario@gmail.com"
+}
+### Update password User
+
+PUT http://localhost:4001/api/users/update-pass
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWRfdXNlciI6Im1fMSIsImlhdCI6MTM1NzAxNzcyNCwiZXhwIjoxMzU3Mjc2OTI0fQ.8m-L5cW7_NyBMFzBdPcC2hIYCulC0CtmFMDPOlzyLkM
+Content-Type: application/json
+
+{
+"password":"123456789",
+"newPassword":"123456"
+}
+
+### delete un usuario
+DELETE http://localhost:4001/api/users/delete
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaGVjayI6dHJ1ZSwiaWRfdXNlciI6Im1fMSIsImlhdCI6MTM1NzAxNzcyNCwiZXhwIjoxMzU3Mjc2OTI0fQ.8m-L5cW7_NyBMFzBdPcC2hIYCulC0CtmFMDPOlzyLkM

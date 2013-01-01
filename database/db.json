@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "id_user": "nox",
+      "name": "luis",
+      "email": "luis@gmail.com",
+      "password": "$2a$10$Nldywi1JNdAYWJUizWkwROvtSSG8YYzIgULyiiBRWA0hkAcAfwHFW"
+    }
+  ],
+  "contacts": []
+}
