@@ -5,11 +5,12 @@ const options = {
   explorer: false,
 
   swaggerOptions: {
-    get:{
-      tags: ["Todo CRUD operations"], // operation's tag.
-    description: "Get a todo", // operation's desc.
-    operationId: "getTodo", // unique operation id
-    }
+    urls: [
+      {
+        url: './swagger.json',
+        name: 'Spec1'
+      },
+    ]
   }
 }
 
