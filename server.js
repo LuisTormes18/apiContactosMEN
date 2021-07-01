@@ -2,9 +2,10 @@ const express = require("express");
 const cors = require("cors");
 const logger = require("morgan");
 const Error404 = require("./middlewares/404");
+const docs = require("./docs/swagger.js");
 const path = require("path");
 
-// Inicializar Expres
+// Inicializar Expresss
 const app = express();
 
 // Settings
@@ -16,6 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/", express.static(path.join(__dirname) + "/public"));
 
+
 // cors
 app.use(cors());
 
@@ -23,6 +25,7 @@ app.use(cors());
 app.use(logger("dev"));
 
 // Routes
+app.use("/api-docs", docs);
 app.use("/api", require("./routes/routes"));
 app.use("*", Error404);
 
