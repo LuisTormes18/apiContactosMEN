@@ -32,6 +32,7 @@ const Login = (req, res = response) => {
   res.json({
     ok: true,
     msg: "Login Sucessfull!",
+    user,
     token,
   });
 };
@@ -62,6 +63,7 @@ const Register = (req, res = response) => {
   return res.json({
     ok: true,
     msg: "Register Sucessfull!",
+    user,
     token,
   });
 };
