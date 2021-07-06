@@ -5,6 +5,18 @@
       "name": "luis",
       "email": "luis@gmail.com",
       "password": "$2a$10$Nldywi1JNdAYWJUizWkwROvtSSG8YYzIgULyiiBRWA0hkAcAfwHFW"
+    },
+    {
+      "id_user": "FFF",
+      "name": "user1",
+      "email": "usuario@gmail.com",
+      "password": "$2a$10$Nldywi1JNdAYWJUizWkwROvtSSG8YYzIgULyiiBRWA0hkAcAfwHFW"
+    },
+    {
+      "id_user": "uAvpsAqrU",
+      "name": "newUser",
+      "email": "newusuario@gmail.com",
+      "password": "$2a$10$fIkdwDTZ0b0bQh6AfKInGuTCOTbg53G2.T/RFMuHZetnt3t89blTi"
     }
   ],
   "contacts": []
