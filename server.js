@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const logger = require("morgan");
-const Error404 = require("./middlewares/404");
+const Error404 = require("./middlewares/error404");
 const docs = require("./docs/swagger.js");
 const path = require("path");
 
@@ -17,7 +17,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/", express.static(path.join(__dirname) + "/public"));
 
-
 // cors
 app.use(cors());
 
@@ -31,7 +30,7 @@ app.use("*", Error404);
 
 // Run server
 app.listen(port, () => {
-  console.log("Server Runing on port " + port);
+    console.log("Server Runing on port " + port);
 });
 
 module.exports = app;

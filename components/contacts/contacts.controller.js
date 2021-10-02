@@ -12,7 +12,7 @@ const get = (req, res) => {
 
   res.json({
     ok: true,
-    msg: "Sucessfull!",
+    msg: "Sucessful!",
     listContacts,
   });
 };
@@ -28,7 +28,7 @@ const add = (req, res) => {
 
   res.json({
     ok: true,
-    msg: "Add Sucessfull!",
+    msg: "Add Sucessful!",
   });
 };
 
@@ -45,7 +45,7 @@ const update = (req, res) => {
   console.log(contact);
   res.json({
     ok: true,
-    msg: "update Sucessfull!",
+    msg: "update Sucessful!",
   });
 };
 
@@ -56,7 +56,7 @@ const del = (req, res) => {
 
   res.json({
     ok: true,
-    msg: "delete Sucessfull!",
+    msg: "delete Sucessful!",
   });
 };
 
